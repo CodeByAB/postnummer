@@ -1,13 +1,17 @@
 # Postnummer service
 
-How to start the postnummer application
+## How to start the postnummer application
 ---
 
 1. Run `mvn clean install` to build your application
 1. Start application with `java -jar target/postnummer-1.0-SNAPSHOT.jar server config.yml`
 1. To check that your application is running enter url `http://localhost:8080`
 
-Health Check
+## Health Check
 ---
 
 To see your applications health enter url `http://localhost:8081/healthcheck`
+
+## Status
+
+[![Build Status](https://travis-ci.com/CodeByAB/postnummer.svg?branch=master)](https://travis-ci.com/CodeByAB/postnummer)
