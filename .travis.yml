@@ -2,7 +2,7 @@ matrix:
   include:
     - language: node_js
       node_js:
-        - "10.15.3"
+        - "stable"
       before_script:
         - cd web
       script:
@@ -16,11 +16,6 @@ matrix:
     - language: docker
       script:
         - docker-compose build
-
-#notifications:
-  #email:
-    #- jonas@valfridsson.net
-
 branches:
   only:
     - master
