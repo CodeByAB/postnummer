@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import AceEditor from "react-ace";
 
 import "brace/mode/json";
-import "brace/theme/solarized_dark";
+import "brace/theme/clouds_midnight";
 
 const Con = styled.div`
   grid-area: console;
+  border-radius: 10px;
 
 `
 
@@ -30,7 +31,7 @@ class Console extends React.Component {
 				 <AceEditor
 						ref={this.editorRef}
 						mode="json"
-						theme="solarized_dark"
+						theme="clouds_midnight"
 						height="100%"
 						widht="100%"
 						value={this.text}

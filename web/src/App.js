@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Console from './Console.js';
 import Output from './Output.js';
+import ButtonIcon from "./internet.svg"
 
 
 const Landing = styled.div`
@@ -9,40 +10,52 @@ const Landing = styled.div`
   width: 100%;
   display: grid;
 
-  grid-template-columns: 10% 30% 10% 10% 13% 22% 5% ;
+  grid-template-columns: 15% 30% 10% 30% 15%;
   grid-template-rows: 10% 70% 20%;
 
 
-	grid-column-gap: 10px;
-  grid-row-gap: 15px;
+	grid-column-gap: 5px;
+  grid-row-gap: 5px;
 
   grid-template-areas:
-		" . response . request request request request "
-    " . display . . console console . "
-    " . . . . . send . ";
+		" . request .  response  . "
+    " . console  .  display  . "
+    " .  send    .    .      . ";
 `
 
 
-const Send = styled.button`
+const Send = styled.div`
   grid-area: send;
   color: green;
-	height: 20%;
-	width: 20%;
+	height: 40%;
+	width: 40%;
+  place-self: center;
+  margin-bottom: 2%;
+
+
+  :hover {
+    cursor: pointer;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  fontsize: 10;
 `
 
 const Request = styled.div`
 	grid-area: request;
 	font-size: 25pt;
 	text-align: center;
+  color: white;
 `
 
 const Response = styled.div`
 	grid-area: response;
 	font-size: 25pt;
 	text-align: center;
+  color: white;
 `
-
-
 
 class App extends React.Component {
   constructor(props) {
@@ -69,7 +82,9 @@ class App extends React.Component {
 					// Update output with response
 					this.setState({output: this.consoleRef.current.text})
 					
-				}}> Try API </Send>
+				}}>
+          <img src={ButtonIcon}/>
+        </Send>
       </Landing>
     );
   }
