@@ -1,6 +1,8 @@
 matrix:
   include:
-    - language: javascript
+    - language: node_js
+      node_js:
+        - "7"
       before_script:
         - cd web
       script:
