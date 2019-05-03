@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfiles/NGinx
+    ports:
+      - "80:80"
+  database:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Postgres
+    ports:
+     - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_USER=postnummer
+      - POSTGRES_DB=postnummer_db
+    volumes:
+      - "./postgres-data:/var/lib/postgresql"
+

@@ -1,5 +1,7 @@
 .idea/
-target/
-dependency-reduced-pom.xml
+api/target/
+api/dependency-reduced-pom.xml
 
 
+
+web/node_modules
