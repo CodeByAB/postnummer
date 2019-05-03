@@ -23,10 +23,6 @@ const Pre = styled.pre`
 `
 
 class Output extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Out className="display">

@@ -83,7 +83,7 @@ class App extends React.Component {
 					this.setState({output: this.consoleRef.current.text})
 					
 				}}>
-          <img src={ButtonIcon}/>
+          <img alt="button-icon" src={ButtonIcon}/>
         </Send>
       </Landing>
     );
