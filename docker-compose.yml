@@ -3,13 +3,13 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfiles/NGinx
+      dockerfile: nginx/Dockerfile
     ports:
       - "80:80"
   database:
     build:
       context: .
-      dockerfile: Dockerfiles/Postgres
+      dockerfile: postgres/Dockerfile
     ports:
      - "5432:5432"
     environment:
