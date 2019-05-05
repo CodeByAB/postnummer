@@ -1,6 +1,9 @@
 matrix:
   include:
     - language: node_js
+      cache: 
+        directories:
+          web/node_modules
       node_js:
         - "stable"
       before_script:
