@@ -15,7 +15,8 @@ matrix:
       before_script:
         - cd api
       script:
-        - echo "TODO -- i do not know java"
+        - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+        - mvn test -B
     - language: docker
       script:
         - docker-compose build
