@@ -1,0 +1,12 @@
+###
+# Search within postnord
+GET https://atapi2.postnord.com/rest/location/v1/surcharge/SE/13670?service_code=31&apikey=API_KEY_NEEDED
+Content-Type: application/json
+
+###
+# Search within open street map
+
+GET https://nominatim.openstreetmap.org?format=json&city=Vendels%C3%B6&country=SE
+Content-Type: application/json
+
+###

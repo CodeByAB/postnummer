@@ -2,3 +2,10 @@ logging:
   level: INFO
   loggers:
     se.codeby: DEBUG
+
+postNordClient:
+  baseUri: https://atapi2.postnord.com
+  apiKey: API_KEY_NEEDED
+
+openStreetMapClient:
+  baseUri: https://nominatim.openstreetmap.org

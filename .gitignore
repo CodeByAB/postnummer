@@ -1,6 +1,7 @@
 .idea/
 api/target/
 api/dependency-reduced-pom.xml
+.DS_Store
 
 
 
