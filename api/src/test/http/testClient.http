@@ -1,6 +1,6 @@
 ###
 # Search within postnord
-GET https://atapi2.postnord.com/rest/location/v1/surcharge/SE/13670?service_code=31&apikey=API_KEY_NEEDED
+GET https://atapi2.postnord.com/rest/location/v1/surcharge/SE/1124?service_code=31&apikey=59500e5ec56e842319609acdc7f70165
 Content-Type: application/json
 
 ###

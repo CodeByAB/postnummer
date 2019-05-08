@@ -1,3 +1,11 @@
+
+database:
+  driverClass: org.postgresql.Driver
+  user: postnummer
+  password: password
+  url: jdbc:postgresql://localhost/postnummer?currentSchema=public
+  validationQuery: "/* GreatFamily Health Check */ SELECT 1"
+
 logging:
   level: INFO
   loggers:
