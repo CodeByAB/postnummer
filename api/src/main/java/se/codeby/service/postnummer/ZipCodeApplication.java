@@ -1,13 +1,13 @@
-package se.codeby.zipcode;
+package se.codeby.service.postnummer;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import lombok.Getter;
-import se.codeby.zipcode.clients.OpenStreetMapClient;
-import se.codeby.zipcode.clients.PostNordClient;
-import se.codeby.zipcode.health.ZipCodeHealthCheck;
-import se.codeby.zipcode.resources.ZipCodeResource;
+import se.codeby.service.postnummer.clients.OpenStreetMapClient;
+import se.codeby.service.postnummer.health.ZipCodeHealthCheck;
+import se.codeby.service.postnummer.resources.ZipCodeResource;
+import se.codeby.service.postnummer.clients.PostNordClient;
 
 @Getter
 public class ZipCodeApplication extends Application<ZipCodeConfiguration> {

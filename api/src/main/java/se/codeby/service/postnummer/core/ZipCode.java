@@ -1,4 +1,4 @@
-package se.codeby.zipcode.core;
+package se.codeby.service.postnummer.core;
 
 import lombok.Builder;
 

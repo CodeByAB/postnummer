@@ -1,10 +1,10 @@
-package se.codeby.zipcode.resources;
+package se.codeby.service.postnummer.resources;
 
 import com.codahale.metrics.annotation.Timed;
-import se.codeby.zipcode.ZipCodeApplication;
-import se.codeby.zipcode.clients.OpenStreetMapClient;
-import se.codeby.zipcode.clients.PostNordClient;
-import se.codeby.zipcode.core.ZipCode;
+import se.codeby.service.postnummer.ZipCodeApplication;
+import se.codeby.service.postnummer.clients.OpenStreetMapClient;
+import se.codeby.service.postnummer.clients.PostNordClient;
+import se.codeby.service.postnummer.core.ZipCode;
 
 import javax.validation.constraints.Pattern;
 import javax.ws.rs.Consumes;

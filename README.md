@@ -1,6 +1,7 @@
 ![Logo](art/logo.png)
 
 [![Build Status](https://travis-ci.com/CodeByAB/postnummer.svg?branch=master)](https://travis-ci.com/CodeByAB/postnummer)
+[![Maven Central](https://img.shields.io/maven-central/v/se.codeby/postnummer.svg)](https://search.maven.org/artifact/se.codeby/postnummer)
 
 ## Dependencies
 ---

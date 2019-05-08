@@ -1,4 +1,4 @@
-package se.codeby.zipcode.clients;
+package se.codeby.service.postnummer.clients;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.client.JerseyClientConfiguration;

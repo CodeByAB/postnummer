@@ -1,4 +1,4 @@
-package se.codeby.zipcode.health;
+package se.codeby.service.postnummer.health;
 
 import com.codahale.metrics.health.HealthCheck;
 

@@ -1,8 +1,8 @@
-package se.codeby.zipcode;
+package se.codeby.service.postnummer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
-import se.codeby.zipcode.clients.ClientConfiguration;
+import se.codeby.service.postnummer.clients.ClientConfiguration;
 
 import javax.validation.constraints.NotNull;
 

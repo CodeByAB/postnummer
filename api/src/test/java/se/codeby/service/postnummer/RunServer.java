@@ -1,4 +1,4 @@
-package se.codeby.zipcode;
+package se.codeby.service.postnummer;
 
 public class RunServer {
 
