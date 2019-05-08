@@ -1,0 +1,9 @@
+###
+GET http://localhost:8080/postnummer/13670
+Content-Type: application/json
+
+###
+GET http://localhost:8080/postinumero/13670
+Content-Type: application/json
+
+###
