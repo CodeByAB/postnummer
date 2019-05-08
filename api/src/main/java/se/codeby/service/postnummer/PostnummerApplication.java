@@ -5,18 +5,18 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import lombok.Getter;
 import se.codeby.service.postnummer.clients.OpenStreetMapClient;
-import se.codeby.service.postnummer.health.ZipCodeHealthCheck;
-import se.codeby.service.postnummer.resources.ZipCodeResource;
+import se.codeby.service.postnummer.health.PostnummerHealthCheck;
+import se.codeby.service.postnummer.resources.PostnummerResource;
 import se.codeby.service.postnummer.clients.PostNordClient;
 
 @Getter
-public class ZipCodeApplication extends Application<ZipCodeConfiguration> {
+public class PostnummerApplication extends Application<PostnummerConfiguration> {
 
     private OpenStreetMapClient openStreetMapClient;
     private PostNordClient postNordClient;
 
     public static void main(final String... args) throws Exception {
-        new ZipCodeApplication().run(args);
+        new PostnummerApplication().run(args);
     }
 
     @Override
@@ -25,15 +25,15 @@ public class ZipCodeApplication extends Application<ZipCodeConfiguration> {
     }
 
     @Override
-    public void initialize(final Bootstrap<ZipCodeConfiguration> bootstrap) {
+    public void initialize(final Bootstrap<PostnummerConfiguration> bootstrap) {
     }
 
     @Override
-    public void run(final ZipCodeConfiguration configuration, final Environment environment) {
+    public void run(final PostnummerConfiguration configuration, final Environment environment) {
         this.postNordClient = PostNordClient.builder().environment(environment).configuration(configuration.postNordClient).build();
         this.openStreetMapClient = OpenStreetMapClient.builder().environment(environment).configuration(configuration.openStreetMapClient).build();
 
-        environment.healthChecks().register(getName(), new ZipCodeHealthCheck());
-        environment.jersey().register(new ZipCodeResource(this));
+        environment.healthChecks().register(getName(), new PostnummerHealthCheck());
+        environment.jersey().register(new PostnummerResource(this));
     }
 }

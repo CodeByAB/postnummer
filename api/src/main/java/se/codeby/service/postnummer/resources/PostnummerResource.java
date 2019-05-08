@@ -1,10 +1,10 @@
 package se.codeby.service.postnummer.resources;
 
 import com.codahale.metrics.annotation.Timed;
-import se.codeby.service.postnummer.ZipCodeApplication;
+import se.codeby.service.postnummer.PostnummerApplication;
 import se.codeby.service.postnummer.clients.OpenStreetMapClient;
 import se.codeby.service.postnummer.clients.PostNordClient;
-import se.codeby.service.postnummer.core.ZipCode;
+import se.codeby.service.postnummer.core.Postnummer;
 
 import javax.validation.constraints.Pattern;
 import javax.ws.rs.Consumes;
@@ -20,11 +20,11 @@ import javax.ws.rs.core.Response;
 @Path("/zip-code")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class ZipCodeResource {
+public class PostnummerResource {
 
-    private final ZipCodeApplication application;
+    private final PostnummerApplication application;
 
-    public ZipCodeResource(ZipCodeApplication application) {
+    public PostnummerResource(PostnummerApplication application) {
         this.application = application;
     }
 
@@ -36,7 +36,7 @@ public class ZipCodeResource {
         PostNordClient.Location location = application.getPostNordClient().findBy(countryCode, zipCode);
         OpenStreetMapClient.Place place = application.getOpenStreetMapClient().findBy(countryCode, location.postalCity);
 
-        return Response.ok(ZipCode.builder()
+        return Response.ok(Postnummer.builder()
             .city(location.postalCity)
             .names(place.names)
             .latitude(place.latitude)

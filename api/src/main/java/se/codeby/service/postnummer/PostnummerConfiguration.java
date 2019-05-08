@@ -7,7 +7,7 @@ import se.codeby.service.postnummer.clients.ClientConfiguration;
 import javax.validation.constraints.NotNull;
 
 @SuppressWarnings("WeakerAccess")
-public class ZipCodeConfiguration extends Configuration {
+public class PostnummerConfiguration extends Configuration {
 
     @NotNull
     @JsonProperty("postNordClient")

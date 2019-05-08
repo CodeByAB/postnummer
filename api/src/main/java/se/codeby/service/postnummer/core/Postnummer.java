@@ -5,7 +5,7 @@ import lombok.Builder;
 import java.util.List;
 
 @Builder
-public class ZipCode {
+public class Postnummer {
     public final String zipCode;
     public final String city;
     public final List<String> names;
